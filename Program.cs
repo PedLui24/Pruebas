@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace YourNamespace
 {
@@ -6,19 +7,17 @@ namespace YourNamespace
     {
         public static void Main (string[] args)
         {
-            int num1 = 0;
-            int num2 = 1;
-
-            Console.Write("Cantidad de Numeros de la Serie Fibonacci: ");
-            int numUser = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < numUser; i++){
-                int flag = num1;
-                num1 = num2;
-                num2 = flag + num1;
-                // 0 , 1, 
-                Console.Write(num1+ ", ");
+            
+            int sumaTotal = 0;
+            int[] numeros2 = {1, 2, 3, 4, 5};
+            
+            for(int i= 0; i < numeros2.Length; i++){
+                sumaTotal = sumaTotal + numeros2[i];
             }
-        }
-    } 
+            int res = sumaTotal / numeros2.Length; 
+
+            Console.WriteLine("La Media es " + res);
+        } 
+    }
+
 }
